@@ -70,7 +70,7 @@ header {
 .nav-container {
   display: flex;
   align-items: center;
-  min-height: 80px;
+  /* min-height: 80px; */
 }
 .nav-subcontainer {
   display: flex;
@@ -100,6 +100,8 @@ span {
   padding: 0;
 }
 .site-nav li {
+  display: block;
+  padding: 34px 0;
   margin-right: 50px;
 }
 .site-nav li:last-child {
@@ -184,7 +186,7 @@ span {
   /* width: 200px; */
   min-height: 38px;
   padding: 6px 22px;
-  margin-left: 8px;
+  /* margin-left: 8px; */
   border: 2px solid transparent;
   cursor: pointer;
   background: #f5f4fa;
@@ -238,6 +240,10 @@ span {
   letter-spacing: 0.03em;
 }
 /* СПИСОК ПРИИМУЩЕСТВ */
+.section-work {
+  padding-bottom: 94px;
+}
+
 .section-work-list {
   display: flex;
   padding: 0;
@@ -261,8 +267,9 @@ span {
 /* КОМАНДА */
 .section-team {
   background-color: #f5f4fa;
-  margin: 94px 15px 0;
-  padding-bottom: 94px;
+  padding: 94px 15px;
+
+  /* margin: 0 15px; */
 }
 
 .section-team-list {
@@ -271,7 +278,7 @@ span {
   /* height: 368px; */
   padding: 0;
   margin-right: -30px;
-  justify-content: center;
+  /* justify-content: center; */
 }
 .section-team-list li {
   background-color: #ffffff;
@@ -308,36 +315,47 @@ span {
 .example-btn-list {
   display: flex;
   justify-content: center;
-  margin-bottom: 34px;
-  padding-bottom: 16px;
+  margin-bottom: 50px;
+
+  /* padding-bottom: 16px; */
+  padding-left: 0px;
 }
+
+.example-btn-list li:not(:first-child) {
+  margin-left: 8px;
+}
+
 .img-example-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  /* gap: 30px; */
+  margin-right: -30px;
+  margin-bottom: -30px;
+
   padding-inline-start: 0;
 }
 
 .img-example-item div {
   border: 1px solid #eeeeee;
-  padding: 0;
+  padding: 20px 24px;
   border-top: none;
-  max-width: 370px;
+  /* max-width: 370px; */
 }
 .img-example-item {
   background: #ffffff;
-
-  max-width: 370px;
+  width: 370px;
+  margin-right: 30px;
+  margin-bottom: 30px;
 }
 .section-example .title {
-  padding: 20px 24px 4px;
+  /* padding: 20px 24px 4px; */
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
 .section-example .text {
-  margin: 0 24px 20px;
+  margin-top: 4px;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
@@ -373,7 +391,7 @@ footer li {
 }
 .footer-list {
   padding: 0;
-  padding-top: 9px;
+  margin-top: 9px;
 }
 
 .footer-list .link {
