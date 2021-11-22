@@ -126,6 +126,7 @@ span {
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 .auth-nav {
   display: flex;
@@ -143,16 +144,15 @@ span {
 .icon-auth-nav {
   width: 16px;
   height: 12px;
-  fill: #757575;
+  fill: currentColor;
+  margin-right: 10px;
 }
-.icon-auth-nav:hover,
-.icon-auth-nav:focus {
-  fill: var(--accent-color);
-}
+
 .icon-sec-auth-nav {
   width: 10px;
   height: 16px;
-  fill: #757575;
+  fill: currentColor;
+  margin-right: 10px;
 }
 .icon-sec-auth-nav:hover,
 .icon-sec-auth-nav:focus {
@@ -229,6 +229,8 @@ span {
 .button-secondary:focus {
   background-color: var(--accent-color);
   color: #ffffff;
+  box-shadow: 0px 2px 2px 0px #0000001f, 0px 1px 2px 0px #00000014,
+    0px 3px 1px 0px #0000001a;
 }
 /* main  1 */
 /* СПИСОК ПРИИМУЩЕСТВ */
@@ -314,6 +316,10 @@ span {
 .section-team-list li {
   background-color: #ffffff;
   margin-right: 30px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
+    0px 1px 3px 0px #0000001f;
 }
 .section-team-list img {
   max-width: none;
@@ -356,6 +362,8 @@ span {
 .container-team-li {
   padding: 30px 0;
   background: #fff;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 
 .client-cont {
@@ -407,6 +415,12 @@ span {
   margin-bottom: -30px;
 
   padding-inline-start: 0;
+}
+
+.img-example-item:hover,
+.img-example-item:focus {
+  box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000f,
+    0px 1px 1px 0px #0000001f;
 }
 
 .img-example-item div {
@@ -491,4 +505,14 @@ footer li {
   letter-spacing: 0.03em;
   text-align: left;
   color: #fff;
+}
+.soclist .icon-team {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 35px;
+  margin-left: 0;
+}
+
+.soclist .icon-team:focus,
+.soclist .icon-team:hover {
+  background-color: var(--accent-color);
 }
