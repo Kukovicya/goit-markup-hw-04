@@ -101,7 +101,7 @@ span {
 }
 .site-nav li {
   display: block;
-  padding: 34px 0;
+  /* padding: 34px 0; */
   margin-right: 50px;
 }
 .site-nav li:last-child {
@@ -115,10 +115,12 @@ span {
 }
 
 .site-nav .link {
+  display: block;
   font-weight: 500;
   line-height: 1, 14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+  padding: 32px 0;
 }
 .site-nav .link.curent {
   color: var(--accent-color);
