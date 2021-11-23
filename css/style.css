@@ -134,11 +134,13 @@ span {
   display: flex;
   margin-left: auto;
   padding: 0;
+  align-items: center;
 }
 
 .auth-nav .link {
+  display: flex;
+  align-items: center;
   color: var(--title-text-color);
-  font-family: Roboto;
   font-weight: 500;
   line-height: 1, 14;
   letter-spacing: 0.02em;
@@ -179,8 +181,12 @@ span {
     ),
     url(../images/background.jpg);
   background-color: var(--secondary-bacground-color);
+  width: 1600px;
+  background-size: 1600px;
+  margin: 0 auto;
   text-align: center;
   padding: 200px 0;
+  background-repeat: no-repeat;
 }
 
 .hero-title {
@@ -242,9 +248,18 @@ span {
   padding: 0;
   /* margin: 94px 30px 94px 0; */
 }
-.icon-hero {
+.icon-hero-container {
   width: 270px;
   height: 120px;
+  border-radius: 4px;
+  background-color: #f5f4fa;
+  text-align: center;
+  padding-top: 27px;
+  margin-bottom: 30px;
+}
+.icon-hero {
+  width: 70px;
+  height: 70px;
 }
 .feature .title {
   font-size: 14px;
@@ -315,7 +330,7 @@ span {
   margin-right: -30px;
   /* justify-content: center; */
 }
-.section-team-list li {
+.section-team-list-li {
   background-color: #ffffff;
   margin-right: 30px;
   border-bottom-right-radius: 4px;
@@ -343,55 +358,91 @@ span {
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
+/* posilanya na socseti */
+.section-team-list-li ul {
+  display: flex;
+  padding: 16px 32px 30px;
+}
 
-.icon-team {
+.icon-team-list:not(:last-child) {
+  margin-right: 10px;
+}
+
+.icon-team-link {
+  display: flex;
+  /* justify-content: center; */
+  /* padding-top: 12px; */
   width: 44px;
   height: 44px;
-  fill: #afb1b8;
+  background-color: inherit;
+  color: #afb1b8;
 }
-.icon-team:first-of-type {
-  margin-left: 32px;
-  margin-top: 16px;
+
+.icon-team {
+  /* width: 20px;
+  height: 20px; */
+  fill: currentColor;
 }
-.icon-team:hover,
-.icon-team:focus {
-  fill: #fff;
+
+.icon-team-link:hover,
+.icon-team-link:focus {
+  color: #fff;
   background-color: var(--accent-color);
   border-radius: 35px;
   cursor: pointer;
 }
 
 .container-team-li {
-  padding: 30px 0;
+  padding-top: 30px;
   background: #fff;
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
 }
-
+/* .section-client {
+  padding-bottom: 94px;
+} */
 .client-cont {
   padding-bottom: 94px;
 }
 .client-list {
   display: flex;
 
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  padding: 0;
+}
+.client-list li:not(:last-child) {
+  margin-right: 30px;
 }
 
-.icon-client {
+.client-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 170px;
   height: 92px;
-  fill: #afb1b8;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
+  color: #afb1b8;
 }
 
-.icon-client:hover,
-.icon-client:focus {
-  fill: var(--accent-color);
+.icon-client {
+  width: 106px;
+  height: 60px;
+
+  fill: currentColor;
+  /* border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px; */
+}
+
+.client-list-link:hover,
+.client-list-link:focus {
+  color: var(--accent-color);
   border-color: var(--accent-color);
   cursor: pointer;
 }
+
 /* main  2 */
 .section-example {
   padding-bottom: 94px;
@@ -419,18 +470,19 @@ span {
   padding-inline-start: 0;
 }
 
-.img-example-item:hover,
-.img-example-item:focus {
+.portfolio-link {
+  display: block;
+  border: 1px solid #eeeeee;
+  padding: 20px 24px;
+  border-top: none;
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
   box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000f,
     0px 1px 1px 0px #0000001f;
 }
 
-.img-example-item div {
-  border: 1px solid #eeeeee;
-  padding: 20px 24px;
-  border-top: none;
-  /* max-width: 370px; */
-}
 .img-example-item {
   background: #ffffff;
   width: 370px;
@@ -456,8 +508,9 @@ footer {
   padding: 60px 0;
 }
 .footer-container {
-  padding: 0 15px;
+  /* padding: 0 15px; */
   display: flex;
+  align-items: baseline;
 }
 address {
   margin-top: 20px;
@@ -497,12 +550,16 @@ footer li {
 .soclist {
   margin-left: 70px;
 }
-
+.soclist ul {
+  margin-top: 20px;
+  padding: 0;
+  display: flex;
+}
 .final {
   /* font-family: Roboto; */
+  /* font-style: bold; */
   font-size: 14px;
-  /* font-style: normal; */
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1.2;
   letter-spacing: 0.03em;
   text-align: left;
@@ -512,6 +569,7 @@ footer li {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 35px;
   margin-left: 0;
+  fill: #fff;
 }
 
 .soclist .icon-team:focus,
