@@ -476,6 +476,9 @@ span {
   padding: 20px 24px;
   border-top: none;
 }
+a {
+  color: var(--primary-text-color);
+}
 
 .portfolio-link:hover,
 .portfolio-link:focus {
