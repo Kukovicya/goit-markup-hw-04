@@ -181,8 +181,8 @@ span {
     ),
     url(../images/background.jpg);
   background-color: var(--secondary-bacground-color);
-  width: 1600px;
-  background-size: 1600px;
+  max-width: 1600px;
+  background-size: cover;
   margin: 0 auto;
   text-align: center;
   padding: 200px 0;
